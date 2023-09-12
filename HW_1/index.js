@@ -132,3 +132,27 @@ function div(a, b) {
     }
     return a / b;
 }
+// Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):
+// Сложение, Разность, Умножение, Деление
+
+console.log(`Сложение:${sum(3, 2)} \nРазность:${sub(2, 5)} \nУмножение:${multiply(3, 2)} \nДеление:${div(6, 2)}`);
+
+function sum(a, b) {
+    return a + b;
+}
+function sub(a, b) {
+    if (b > a) {
+        return b - a;
+    } else {
+        return a - b;
+    }
+}
+function multiply(a, b) {
+    return a * b;
+}
+function div(a, b) {
+    if (b === 0) {
+        return 0;
+    }
+    return a / b;
+}
