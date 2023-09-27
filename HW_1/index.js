@@ -170,10 +170,10 @@
 // for (let i = 0; i <= num; i++) {
 //     if (i === 0) {
 //         console.log(`${i} - это ноль`);
-//     } else if (i % 2 === 0) {
-//         console.log(`${i} - четное число`);
-//     } else if (i % 2 !== 0) {
+//     } else if (i % 2) {
 //         console.log(`${i} - нечетное число`);
+//     } else {
+//         console.log(`${i} - четное число`);
 //     }
 // }
 
@@ -197,7 +197,7 @@
 // function randArr() {
 //     let array = [];
 //     for (let i = 0; i < 5; i++) {
-//         array.push(Math.round(Math.random() * 10));
+//         array.push(Math.round(Math.random() * 9));
 //     }
 //     return array;
 // };
@@ -254,53 +254,53 @@
 // Задание 1
 // Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.
 
-const numbers = {
-    keyin1: 1,
-    keyin2: 2,
-    keyin3: 3,
-    keyin4: 4,
-    keyin5: 5,
-    keyin6: 6,
-    keyin7: 7,
-}
+// const numbers = {
+//     keyin1: 1,
+//     keyin2: 2,
+//     keyin3: 3,
+//     keyin4: 4,
+//     keyin5: 5,
+//     keyin6: 6,
+//     keyin7: 7,
+// }
 
-console.log(Object.values(numbers).filter(a => a >= 3));
+// console.log(Object.values(numbers).filter(a => a >= 3));
 
 
 // Задание 2
 // Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
 
-const post = {
-    author: "John", // вывести этот текст
-    postId: 23,
-    comments: [
-        {
-            userId: 10,
-            userName: "Alex",
-            text: "lorem ipsum",
-            rating: {
-                likes: 10,
-                dislikes: 2, // вывести это число
-            },
-        },
-        {
-            userId: 5, // вывести это число
-            userName: "Jane",
-            text: "lorem ipsum 2", // вывести этот текст
-            rating: {
-                likes: 3,
-                dislikes: 1,
-            },
-        },
-    ],
-};
+// const post = {
+//     author: "John", // вывести этот текст
+//     postId: 23,
+//     comments: [
+//         {
+//             userId: 10,
+//             userName: "Alex",
+//             text: "lorem ipsum",
+//             rating: {
+//                 likes: 10,
+//                 dislikes: 2, // вывести это число
+//             },
+//         },
+//         {
+//             userId: 5, // вывести это число
+//             userName: "Jane",
+//             text: "lorem ipsum 2", // вывести этот текст
+//             rating: {
+//                 likes: 3,
+//                 dislikes: 1,
+//             },
+//         },
+//     ],
+// };
 
 
-const { author, comments } = post; 
-console.log(author);
-console.log(comments[0].rating.dislikes);
-console.log(comments[1].userId);
-console.log(comments[1].text); 
+// const { author, comments } = post; 
+// console.log(author);
+// console.log(comments[0].rating.dislikes);
+// console.log(comments[1].userId);
+// console.log(comments[1].text); 
 
 
 
@@ -308,25 +308,25 @@ console.log(comments[1].text);
 // Дан массив products, необходимо цену каждого продукта уменьшить на 15% 
 // используя метод forEach.
 
-const products = [
-    {
-        id: 3,
-        price: 200,
-    },
-    {
-        id: 4,
-        price: 900,
-    },
-    {
-        id: 1,
-        price: 1000,
-    },
-];
+// const products = [
+//     {
+//         id: 3,
+//         price: 200,
+//     },
+//     {
+//         id: 4,
+//         price: 900,
+//     },
+//     {
+//         id: 1,
+//         price: 1000,
+//     },
+// ];
 
-products.forEach(function(product){
-product.price = product.price - (product.price * 0.15) 
-});
-console.log(JSON.stringify(products, null, 2));
+// products.forEach(function(product){
+// product.price = product.price - (product.price * 0.15) 
+// });
+// console.log(JSON.stringify(products, null, 2));
 
 
 
@@ -337,37 +337,37 @@ console.log(JSON.stringify(products, null, 2));
 // начиная с самой маленькой, заканчивая самой большой ценой,
 // после чего вывести отсортированный массив в консоль.
 
-const products = [
-    {
-        id: 3,
-        price: 127,
-        photos: [
-            "1.jpg",
-            "2.jpg",
-        ],
-    },
-    {
-        id: 5,
-        price: 499,
-        photos: [],
-    },
-    {
-        id: 10,
-        price: 26,
-        photos: [
-            "3.jpg",
-        ],
-    },
-    {
-        id: 8,
-        price: 78,
-    },
-];
+// const products = [
+//     {
+//         id: 3,
+//         price: 127,
+//         photos: [
+//             "1.jpg",
+//             "2.jpg",
+//         ],
+//     },
+//     {
+//         id: 5,
+//         price: 499,
+//         photos: [],
+//     },
+//     {
+//         id: 10,
+//         price: 26,
+//         photos: [
+//             "3.jpg",
+//         ],
+//     },
+//     {
+//         id: 8,
+//         price: 78,
+//     },
+// ];
 
-const arrfilter = products.filter(product => product.photos && product.photos.length > 0);
-const arrSort = products.sort((a,b) => a.price - b.price);
-console.log(JSON.stringify(arrfilter, null, 2));
-console.log(JSON.stringify(arrSort, null, 2));
+// const arrfilter = products.filter(product => product.photos && product.photos.length > 0);
+// const arrSort = products.sort((a,b) => a.price - b.price);
+// console.log(JSON.stringify(arrfilter, null, 2));
+// console.log(JSON.stringify(arrSort, null, 2));
 
 
 
@@ -376,13 +376,165 @@ console.log(JSON.stringify(arrSort, null, 2));
 // Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, 
 // а значения второго массива — значениями. 
 
-const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+// const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
 
-const obj = {};
-for (let i = 0; i < ru.length; i++) {
-    obj[en[i]] = ru[i]
+// const obj = {};
+// for (let i = 0; i < ru.length; i++) {
+//     obj[en[i]] = ru[i]
+// }
+// console.log(obj);
+
+
+
+// function getRandomInt(max) {
+//     return Math.floor(Math.random() * max);
+// }
+
+// let passWord = "";
+// const passSize = 10;
+// const obj = {
+//     1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+//     2: ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"],
+//     3: ["~", "!", "@", "#", "$", "%", "&", "*"]
+// };
+
+// for (let i = 0; i < passSize; i++) {
+//     switch (getRandomInt(3)) {
+//         case 0: 
+//             passWord += obj[1][getRandomInt(obj[1].length)];
+//             break;
+//         case 1:
+//             passWord += obj[2][getRandomInt(obj[2].length)];
+//             break;
+//         case 2:
+//             passWord += obj[3][getRandomInt(obj[3].length)];
+//             break;
+//     }
+// }
+
+// console.log(passWord);
+
+
+// 1) Подробней о замыканиях
+// 2) Как посмотреть вложенность html элементов при помощи JS      
+
+
+
+
+// class book {
+//     constructor(title, author, pages) {
+//         this.title = title;
+//         this.author = author;
+//         this.pages = pages;
+//     }
+//     displayInfo = () => {
+//         console.log(this.title + " " + this.author + " " + this.pages);
+//     }
+// }
+// const lol = new book("Atlas Shrugged", "Ayn Rand", 1168);
+// lol.displayInfo();
+// console.log(lol);
+
+
+
+// class Student {
+//     constructor(name, age, grade) {
+//         this.name = name;
+//         this.age = age;
+//         this.grade = grade;
+//     }
+
+//     displayInfo = () => {
+//         console.log(`Name: ${this.name} \nAge: ${this.age} \nGrade: ${this.grade}`);
+//     }
+// }
+
+// const student = new Student("John Smith",16,"10th grade");
+// const studentTwo = new Student("Владос Собачий",25,"20 grade")
+// student.displayInfo();
+// console.log("");
+// // studentTwo.displayInfo();
+
+
+
+// class Employee {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     displayInfo = () => {
+//         console.log(`Name: ${this.name}`);
+//     };
+// }
+
+// class Manager extends Employee {
+//     constructor(name, department) {
+//         super(name);
+//         this.department = department;
+//     }
+//     displayInfo = () => {
+//         console.log(`Name: ${this.name} \nDepartment: ${this.department}`);
+//     }
+// }
+
+// const employee = new Employee("John Smith");
+// employee.displayInfo();
+
+// const manager = new Manager("Jane Doe", "Sales");
+// manager.displayInfo();
+
+
+class Order {
+    constructor(orderNumber, products) {
+        this.orderNumber = orderNumber;
+        this.products = [];
+    };
+
+
+    addProduct = (product) => {
+        this.products.push(product);
+    }
+
+    getTotalPrice() {
+        let totalPrice = 0;
+        for (const product of this.products) {
+            totalPrice += product.price;
+        }
+        return totalPrice;
+    }
+
+    getNameProduct = (product) =>{
+        let namePr = [];
+        for (const product of this.products) {
+            namePr.push(product.name);
+        }
+        return namePr;
+    }
+};
+
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    };
 }
-console.log(obj);
 
 
+const order = new Order(12345);
+const product1 = new Product("Phone", 500)
+order.addProduct(product1);
+
+const product2 = new Product("Headphones", 100);
+order.addProduct(product2);
+
+const product3 = new Product("ТГ", 1000);
+order.addProduct(product3);
+
+console.log(order.getNameProduct());
+console.log(order.getTotalPrice());
+
+
+const order2 = new Order(325464);
+order2.addProduct(product3);
+console.log(order2.getNameProduct());
+console.log(order2.getTotalPrice());
