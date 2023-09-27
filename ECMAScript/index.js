@@ -5,8 +5,8 @@
 // найти минимальное число в массиве, решение задание должно состоять из одной
 // строки кода.
 
-// let arr = [1, 5, 7, 9];
-// console.log(Math.min(...arr));
+let arr = [1, 5, 7, 9];
+console.log(Math.min(...arr));
 
 
 // 2) Напишите функцию createCounter, которая создает счетчик и возвращает объект
@@ -15,27 +15,27 @@
 // на 1. Значение счетчика должно быть доступно только через методы объекта,
 // а не напрямую.
 
-// function createCounter() {
-//     let count = 0;
-//     return {
-//         increment: function () {
-//             count++;
-//         },
-//         decrement: function () {
-//             count--;
-//         },
-//         getCount: function () {
-//             return count;
-//         }
-//     };
-// };
+function createCounter() {
+    let count = 0;
+    return {
+        increment: function () {
+            count++;
+        },
+        decrement: function () {
+            count--;
+        },
+        getCount: function () {
+            return count;
+        }
+    };
+};
 
-// const counter = createCounter();
-// counter.increment();
-// counter.increment();
-// console.log(counter.getCount());
-// counter.decrement();
-// console.log(counter.getCount());
+const counter = createCounter();
+counter.increment();
+counter.increment();
+console.log(counter.getCount());
+counter.decrement();
+console.log(counter.getCount());
 
 
 // 3) Дополнительное задание, выполняем только если проходили работу с DOM.
@@ -43,19 +43,19 @@
 // элемент дерева DOM и название класса в качестве аргументов и возвращает первый
 // найденный элемент с указанным классом в этом дереве.
 
-// function findElementByClass(rootElement, className) {
-//     if (rootElement.classList.contains(className)) {
-//         return rootElement;
-//     }
+function findElementByClass(rootElement, className) {
+    if (rootElement.classList.contains(className)) {
+        return rootElement;
+    }
 
-//     for (const childElement of rootElement.children) {
-//         const foundElement = findElementByClass(childElement, className);
-//         if (foundElement) {
-//             return foundElement;
-//         }
-//     }
+    for (const childElement of rootElement.children) {
+        const foundElement = findElementByClass(childElement, className);
+        if (foundElement) {
+            return foundElement;
+        }
+    }
 
-//     return null;
+    return null;
 // }
 
 // const rootElement = document.getElementById('root');
@@ -75,20 +75,20 @@
 // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
 
 
-// class book {
-//     constructor(title, author, pages) {
-//         this.title = title;
-//         this.author = author;
-//         this.pages = pages;
-//     }
-//     displayInfo = () => {
-//         console.log(this.title + " - " + this.author + " / " + this.pages);
-//     }
-// }
-// const book1 = new book("Atlas Shrugged", "Ayn Rand", 1168);
-// const book2 = new book("Lord of the Rings", "John Ronald Reuel Tolkien", 1191 );
-// book1.displayInfo();
-// book2.displayInfo();
+class book {
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+    displayInfo = () => {
+        console.log(this.title + " - " + this.author + " / " + this.pages);
+    }
+}
+const book1 = new book("Atlas Shrugged", "Ayn Rand", 1168);
+const book2 = new book("Lord of the Rings", "John Ronald Reuel Tolkien", 1191 );
+book1.displayInfo();
+book2.displayInfo();
 
 
 // Задание 2: "Управление списком студентов"
