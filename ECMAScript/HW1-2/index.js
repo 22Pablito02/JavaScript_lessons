@@ -18,15 +18,15 @@ console.log(Math.min(...arr));
 function createCounter() {
     let count = 0;
     return {
-        increment: function () {
+        increment() {
             count++;
         },
-        decrement: function () {
+        decrement() {
             count--;
         },
-        getCount: function () {
+        getCount(){
             return count;
-        }
+        },
     };
 };
 
@@ -54,9 +54,8 @@ function findElementByClass(rootElement, className) {
             return foundElement;
         }
     }
-
     return null;
-// }
+};
 
 // const rootElement = document.getElementById('root');
 // const targetElement = findElementByClass(rootElement, 'text');
@@ -75,18 +74,18 @@ function findElementByClass(rootElement, className) {
 // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
 
 
-class book {
+class Book {
     constructor(title, author, pages) {
         this.title = title;
         this.author = author;
         this.pages = pages;
     }
-    displayInfo = () => {
-        console.log(this.title + " - " + this.author + " / " + this.pages);
+    displayInfo() {
+        console.log(`${this.title} - ${this.author} / ${this.pages}`);
     }
 }
-const book1 = new book("Atlas Shrugged", "Ayn Rand", 1168);
-const book2 = new book("Lord of the Rings", "John Ronald Reuel Tolkien", 1191 );
+const book1 = new Book("Atlas Shrugged", "Ayn Rand", 1168);
+const book2 = new Book("Lord of the Rings", "John Ronald Reuel Tolkien", 1191 );
 book1.displayInfo();
 book2.displayInfo();
 
@@ -105,7 +104,7 @@ class Student {
         this.grade = grade;
     }
 
-    displayInfo = () => {
+    displayInfo(){
         console.log(`Name: ${this.name} \nAge: ${this.age} \nGrade: ${this.grade}`);
     }
 }
