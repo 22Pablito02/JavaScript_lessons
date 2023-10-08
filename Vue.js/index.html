@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Home work 1</h1>
+        <h3>Task 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться
+            и отобразиться в обратном порядке.</h3>
+
+        <p>{{ massage }}</p>
+        <button @click="reversText()">Сlick on me!</button>
+        <br>
+        <hr>
+        <br>
+        <h3>Task 2-3. Есть список элементов. Пользователь может добавлять новые элементы списка
+            с текстом “Новый элемент списка” нажав на кнопку "Добавить".<br>*Дополнительное задание: При клике на
+            элемент
+            списка он должен быть удален.</h3>
+        <button @click="addItem">Добавить</button>
+        <ul>
+            <li v-for="(item, index) in itemList" :key="index" @click="removeItem(index)">
+                {{ item }} {{ index }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const App = {
+            data() {
+                return {
+                    massage: "привет",
+                    itemList: [],
+                };
+            },
+            methods: {
+                reversText() {
+                    let res = "";
+                    for (let i = this.massage.length - 1; i >= 0; i--) {
+                        res += this.massage[i];
+                    }
+                    this.massage = res;
+                },
+                addItem() {
+                    this.itemList.push('Новый элемент списка');
+                },
+                removeItem(index) {
+                    this.itemList.splice(index, 1);
+                },
+            },
+        };
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>
