@@ -29,6 +29,25 @@
                 {{ item }} {{ index }}
             </li>
         </ul>
+        <hr>
+        <h1 style="margin-top:70px;">Home work 2</h1>
+        <h3>Вы разрабатываете приложение для отображения и сортировки списка товаров.
+            <br>У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой.
+            <br>Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по
+            цене (по возрастанию и по убыванию).
+        </h3>
+        <ul>
+            <label for="">Цена: </label>
+            <button @click="ascending">по возрастанию</button>
+            <button @click="descending">по убыванию</button>
+            <br>
+            <br>
+            <li v-for="(product, index) in products" :key="index">
+                {{ product.name }} - {{ product.price }} руб.
+            </li>
+        </ul>
+
+
     </div>
 
     <script>
@@ -37,6 +56,14 @@
                 return {
                     massage: "привет",
                     itemList: [],
+                    products: [
+                        { name: "apple", price: 120 },
+                        { name: "carrot", price: 18 },
+                        { name: "watermelon", price: 45 },
+                        { name: "stillWater", price: 80 },
+                        { name: "cucumber", price: 109 },
+                        { name: "potato", price: 200 },
+                    ]
                 };
             },
             methods: {
@@ -53,6 +80,12 @@
                 removeItem(index) {
                     this.itemList.splice(index, 1);
                 },
+                ascending() {
+                    this.products.sort((a, b) => a.price - b.price);
+                },
+                descending() {
+                    this.products.sort((a, b) => b.price - a.price);
+                }
             },
         };
         Vue.createApp(App).mount('#app')

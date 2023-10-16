@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Jost', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+p {
+    color: #4D5053;
+    font-family: "Jost";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 33px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.name-logo {
+    color: #292F36;
+    font-family: "DM Serif Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    width: 243px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav>li {
+    color: #292F36;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.nav>li:hover {
+    transform: scale(1.18);
+    transition: .5s;
+}
+
+.unique-block {
+    width: 100%;
+    height: 604px;
+    display: flex;
+    align-items: center;
+    background-image: url(/img/BeUnique.png);
+    border-radius: 60px;
+}
+
+.unique-items {
+    max-width: 434px;
+    margin-left: 40px;
+}
+
+.unique-title {
+    color: #292F36;
+    font-family: "DM Serif Display";
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.unique-items>p {
+    margin-top: 19px;
+    margin-bottom: 21px;
+}
+
+.btn {
+    display: flex;
+    padding: 26px 49px 26px 48px;
+    text-align: center;
+    border-radius: 18px;
+    background: #292F36;
+    color: #FFF;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    max-width: 220px;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+
+.btn:hover{
+    color: #000;
+    border-color: #000;
+    background-color: #F4F0EC;
+    transition: .3s;
+}
+
+.btn>svg {
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+.examples {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+.project .examples:nth-child(2n) {
+    margin-bottom: 80px;
+}
+
+.title {
+    color: #292F36;
+    text-align: center;
+    font-family: "DM Serif Display";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 96px;
+}
+
+.subtitle {
+    text-align: center;
+    max-width: 737px;
+    margin: 8px auto 93px;
+}
+
+.subtitle--news {
+    max-width: 785px;
+    margin-bottom: 52px;
+    ;
+}
+
+.exemples-block {
+    max-width: 525px;
+}
+
+.exemple-photo {
+    width: 100%;
+    height: auto;
+}
+
+.exemple-photo-tr {
+    border-radius: 0 70px 0 0;
+}
+
+.exemple-photo-tl {
+    border-radius: 70px 0 0 0;
+}
+
+.exemple-photo-br {
+    border-radius: 0 0 70px 0;
+}
+
+.exemple-photo-bl {
+    border-radius: 0 0 0 70px;
+}
+
+.description {
+    position: relative;
+    margin-top: 24px;
+}
+
+.block-title {
+    color: #292F36;
+    font-family: "DM Serif Display";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.circle-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F4F0EC;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.circle-arrow:hover{
+    border-color: #000;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.circle-arrow--news {
+    width: 52px;
+    height: 52px;
+    border: none;
+}
+
+.statistics {
+    width: 100%;
+    height: 457px;
+    background-color: #F4F0EC;
+
+}
+
+.cells {
+    height: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    ;
+    text-align: center;
+}
+
+.cell {
+    border-right: 1px solid #CDA274;
+    grid-row: 2 / 3;
+}
+
+.cells .cell:nth-child(4n) {
+    border: none;
+}
+
+.num {
+    color: #CDA274;
+    font-family: "DM Serif Display";
+    font-size: 85px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.news-blocks {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+}
+
+.news-block {
+    max-width: 382px;
+    width: 100%;
+    padding: 21px;
+    border: 1px solid #E7E7E7;
+    border-radius: 62px;
+    transition: .3s;
+}
+
+.news-block:hover{
+    background-color: #F4F0EC;
+    transition: .3s;
+}
+
+.news-block:hover .circle-arrow--news{
+    background-color: #fff;
+    transition: .3s;
+}
+
+.news-img {
+    max-width: 340px;
+    border-radius: 45px 45px 0 0;
+    margin-bottom: 21px;
+}
+
+.date-block {
+    position: relative;
+    margin-top: 30px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #4D5053;
+    font-family: "Jost";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footer {
+    grid-template-columns: 1fr .5fr .5fr 1fr;
+    column-gap: 101px;
+    margin-top: 96px;
+    margin-bottom: 134px;
+}
+
+.footer-left {
+    width: 393px;
+    margin-bottom: 18px;
+}
+
+.social {
+    display: flex;
+    margin-top: 31px;
+}
+
+.social>a {
+    margin-right: 54px;
+}
+
+.footer-pages {
+    max-width: 125px;
+}
+
+.footer-services {
+    max-width: 120px;
+}
+
+.footer-contacts {
+    max-width: 258px;
+    gap: 26px;
+}
+
+.block-title--footer {
+    margin-bottom: 26px;
+}
+
+.subtitle-footer {
+    margin: 0;
+}
+
+.footer-pages>ul {
+    list-style: none;
+    display: grid;
+    gap: 21px;
+    color: #4D5053;
+    font-family: "Jost";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contact-info {
+    gap: 26px;
+}
+
+.logo-block--footer {
+    margin-bottom: 18px;
+}
