@@ -28,24 +28,15 @@
             </ul>
         </div>
     </section>
-
     <section class="linear-image linear-image--articles"></section>
     <script src="./js/articles.js"></script>
     <script src="./js/tags.js"></script>
     <section id="app" class="publication container flex">
-
-
-
-
         <div class="articles">
             <articles :active-tag="activeTag"></articles>
         </div>
         <tags @new-tag="onActiveTagChange"></tags>
     </section>
-
-
-
-
     <footer class="footer grid container">
         <div class="footer-left">
             <div class="logo-block logo-block--footer">
@@ -104,7 +95,6 @@
             </div>
         </div>
     </footer>
-
 
     <script>
         const App = {
