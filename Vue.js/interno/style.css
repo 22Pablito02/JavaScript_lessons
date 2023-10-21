@@ -470,14 +470,16 @@ p {
     margin-bottom: 18px;
 }
 
-
+.linear-image {
+    width: 100%;
+    min-height: 356px;
+}
 
 
 /* -------Blog-------- */
 
-.blog-top {
-    width: 100%;
-    min-height: 356px;
+.linear-image--blog {
+
     justify-content: center;
     align-items: end;
     background: url(./img/blog-bg.png);
@@ -516,4 +518,136 @@ p {
     list-style: none;
     gap: 20px;
     text-align: center;
+}
+
+
+/* ----------articles--------- */
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linear-image--articles {
+    background: url(./img/articles-bg.png);
+}
+
+.publication {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    gap: 52px;
+}
+
+.title--article {
+    text-align: left;
+    margin: 0;
+    margin-top: 27px;
+    margin-bottom: 21px;
+}
+
+.title--article:first-child {
+    margin-top: 0;
+}
+
+.article-img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+.date {
+    margin-top: 46px;
+    margin-bottom: 48px;
+    justify-content: space-between;
+}
+
+.bread-crumbs {
+    margin-right: 7%;
+}
+
+.article>ol {
+    display: grid;
+    gap: 32px;
+    max-width: 732px;
+    margin-left: 20px;
+}
+
+.article>ol p {
+    margin-left: 14px;
+}
+
+.article>ol li::marker {
+    font-size: 20px;
+    color: #CDA274;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "DM Serif Display";
+    margin-right: 11px;
+}
+
+.article>p {
+    margin-bottom: 24px;
+}
+
+.article>p:last-child {
+    margin-bottom: 0;
+}
+
+.quote {
+    width: 100%;
+    max-height: 800px;
+    border-radius: 50px;
+    background-color: #F4F0EC;
+    padding: 53px 227px;
+    text-align: center;
+}
+
+.quotation-marks {
+    max-width: 75px;
+    width: 100%;
+    height: auto;
+}
+
+.quote-text {
+    color: #CDA274;
+    font-family: "DM Serif Display";
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.article-img--s {
+    max-height: 800px;
+    margin-top: 44px;
+    margin-bottom: 35px;
+}
+
+.tags {
+    margin-top: 24px;
+    min-width: 345px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: #292F36;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 9px 30px;
+    margin-right: 10px;
+    margin-bottom: 11px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #F4F0EC;
+    transition: .2s;
+}
+
+.tag:hover,
+.active {
+    color: #fff;
+    background-color: #4D5053;
+    transition: .2s;
 }
