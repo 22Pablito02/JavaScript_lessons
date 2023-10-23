@@ -109,7 +109,7 @@ p {
     height: 604px;
     display: flex;
     align-items: center;
-    background-image: url(./img/BeUnique.png);
+    background-image: url(@/assets/img/BeUnique.png);
     border-radius: 60px;
 }
 
@@ -482,7 +482,7 @@ p {
 
     justify-content: center;
     align-items: end;
-    background: url(./img/blog-bg.png);
+    background: url(@/assets/img/blog-bg.png);
 
 }
 
@@ -529,7 +529,7 @@ p {
 }
 
 .linear-image--articles {
-    background: url(./img/articles-bg.png);
+    background: url(@/assets/img/articles-bg.png);
 }
 
 .publication {
