@@ -1,24 +1,4 @@
 <template>
-<section class="header container">
-        <div class="logo-block">
-            <a href="#"><img src="@/assets/img/logo.png" alt="" class="logo"></a>
-            <a href="#">
-                <div class="name-logo">Interno</div>
-            </a>
-        </div>
-        <div class="header-right">
-            <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-    </section>
-    <section class="linear-image linear-image--articles"></section>
-    <section id="app" class="publication container flex">
-        <articleContent :active-tag="activeTag"/>
-        <tags @new-tag="onActiveTagChange" />
-    </section>
     <footer class="footer grid container">
         <div class="footer-left">
             <div class="logo-block logo-block--footer">
@@ -53,6 +33,7 @@
                 </a>
             </div>
         </div>
+
         <div class="footer-pages">
             <h3 class="block-title block-title--footer">Pages</h3>
             <ul>
@@ -80,26 +61,91 @@
 </template>
 
 <script>
-import tags from "@/components/tags.vue";
-import articleContent from "@/components/articleContent.vue";
     export default {
-        data() {
-                return {
-                    activeTag: "",
-                };
-            },
-            components: {
-                tags,
-                articleContent,
-            },
-            methods: {
-                onActiveTagChange(newActiveTag) {
-                    this.activeTag = newActiveTag;
-                },
-            },
+        
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.logo-block {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 33px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.name-logo {
+    color: #292F36;
+    font-family: "DM Serif Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.footer {
+    grid-template-columns: 1fr .5fr .5fr 1fr;
+    column-gap: 101px;
+    margin-top: 96px;
+    margin-bottom: 134px;
+}
+
+.footer-left {
+    width: 393px;
+    margin-bottom: 18px;
+}
+
+.social {
+    display: flex;
+    margin-top: 31px;
+}
+
+.social>a {
+    margin-right: 54px;
+}
+
+.footer-pages {
+    max-width: 125px;
+}
+
+.footer-services {
+    max-width: 120px;
+}
+
+.footer-contacts {
+    max-width: 258px;
+    gap: 26px;
+}
+
+.block-title--footer {
+    margin-bottom: 26px;
+}
+
+.subtitle-footer {
+    margin: 0;
+}
+
+.footer-pages>ul {
+    list-style: none;
+    display: grid;
+    gap: 21px;
+    color: #4D5053;
+    font-family: "Jost";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contact-info {
+    gap: 26px;
+}
+
+.logo-block--footer {
+    margin-bottom: 18px;
+}
 
 </style>
