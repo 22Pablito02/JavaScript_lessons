@@ -37,7 +37,7 @@
         </div>
         <div class="pagination">
             <ul>
-                <li><a href="#" class="circle-arrow circle-arrow--block active">01</a></li>
+                <li><a href="#" class="circle-arrow circle-arrow--block active-arrow">01</a></li>
                 <li><a href="#" class="circle-arrow circle-arrow--block">02</a></li>
                 <li><a href="#" class="circle-arrow circle-arrow--block">03</a></li>
                 <li><a href="#" class="circle-arrow circle-arrow--block"><svg xmlns="http://www.w3.org/2000/svg" width="10"
