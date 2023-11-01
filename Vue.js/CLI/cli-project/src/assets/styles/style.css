@@ -370,6 +370,10 @@ p {
     background: url(@/assets/img/project-bg.png);
 }
 
+.linear-image--details {
+    background: url(@/assets/img/details-bg.png);
+}
+
 .blog-title {
     padding: 41px 78px;
     background-color: #fff;
@@ -529,7 +533,8 @@ p {
     transition: .2s;
 }
 
-.tag:hover, .active {
+.tag:hover,
+.active {
     color: #fff;
     background-color: #4D5053;
     transition: .2s;
@@ -564,7 +569,8 @@ p {
     background-color: #fff;
 }
 
-.categories button:hover, button.activeCat{
+.categories button:hover,
+button.activeCat {
     background-color: #CDA274;
     color: #fff;
 }
@@ -594,4 +600,95 @@ p {
     position: absolute;
     top: 5px;
     right: 1px;
+}
+
+
+/* ------------ details ------------ */
+
+.details {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.details-info {
+    max-width: 658px;
+    margin: 0 auto;
+}
+
+.title--details {
+    margin-bottom: 11px;
+    text-align: left;
+}
+
+.galary {
+    margin-top: 100px;
+}
+
+.galary-slider {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 70px;
+}
+
+.galary-slider>img {
+    width: 100%;
+    max-height: 800px;
+}
+
+.zoom{
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: #fff;
+    filter: drop-shadow(0px 10px 20px rgba(192, 192, 192, 0.25));
+    transition: .3s;
+}
+
+.zoom:hover{
+    background-color: #CDA274;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.zoom>svg{
+    width: 37px;
+    height: 37px;
+    fill: #CDA274;
+    display: flex;
+    margin: 36% auto;
+    transition: .3s;
+}
+
+.zoom:hover>svg{
+    fill: #fff;
+    transition: .3s;
+}
+
+.swiper-pagination{
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination>span{
+    opacity: 1;
+}
+
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000 !important;
+    border-radius: 50%;
+    background-color: #fff;
+} 
+
+.swiper-pagination-bullet-active{
+   border-color: #ccc !important;
+}
+
+.swiper-zoom-container > img{
+    border-radius: 70px;
+    padding: 0 3px;
 }
