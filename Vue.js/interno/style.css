@@ -654,7 +654,7 @@ p {
     transition: .2s;
 }
 
-.tag:hover + .active {
+.tag:hover+.active {
     color: #fff;
     background-color: #4D5053;
     transition: .2s;
@@ -720,4 +720,51 @@ p {
     position: absolute;
     top: 5px;
     right: 1px;
+}
+
+
+.container--err {
+    position: unset;
+}
+
+.error {
+    height: 1018px;
+}
+
+.error-info {
+    max-width: 50%;
+    margin: auto 0;
+}
+
+.err-num {
+    color: #CDA274;
+    font-family: "DM Serif Display";
+    font-size: 250px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.err-text {
+    color: #292F36;
+    font-family: "DM Serif Display";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 15px 0 23px;
+    line-height: 150%
+}
+
+.btn-back-home {
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    padding: 26px 54px;
+    max-width: max-content;
+}
+
+.err-img {
+    max-width: 50%;
+    height: 1018px;
+    position: absolute;
+    right: 0;
+    border-radius: 0 0 0 300px;
 }

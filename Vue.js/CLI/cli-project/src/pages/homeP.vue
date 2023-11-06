@@ -1,16 +1,16 @@
 <template>
-    <headerCom />
     <section class="unique container">
         <div class="unique-block">
             <div class="unique-items">
                 <h1 class="unique-title">Let Your Home<br>Be Unique</h1>
                 <p>There are many variations of the passages of
                     lorem Ipsum fromavailable, majority.</p>
-                <a href="#" class="btn">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17"
+                <router-link :to="artURL" class="btn">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17"
                         viewBox="0 0 18 17" fill="none">
                         <path d="M1 8.43529L14.7232 8.29844M9.61818 1.91125L16.1412 8.43424L9.48677 15.0886"
                             stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-                    </svg></a>
+                    </svg>
+                </router-link>
             </div>
         </div>
     </section>
@@ -98,22 +98,21 @@
 
     <section id="app" class="news container">
         <h2 class="title title--blog">Articles & News</h2>
-        <news />        
+        <news />
     </section>
-
-    <FooterCom />
 </template>
 
 <script>
-import headerCom from "@/components/headerCom.vue"
 import news from "@/components/news.vue";
-import FooterCom from "./footerCom.vue";
 export default {
-    components:{
-    headerCom,
-    news,
-    FooterCom
-}
+    data(){
+        return{
+            artURL: "/articles",
+        }
+    },
+    components: {
+        news,
+    }
 }
 </script>
 

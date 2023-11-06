@@ -1,6 +1,6 @@
 <template>
     <div class="news-blocks grid">
-        <a v-for="(block, index) in blockInfo" :key="index" :href="block.reference" class="news-block">
+        <router-link v-for="(block, index) in blockInfo" :key="index" :to="block.url" :href="block.url" class="news-block">
             <div class="relative">
                 <img class="news-img" :src="block.img" alt="">
                 <div class="img-description flex">{{ block.imgDescr }}</div>
@@ -15,7 +15,7 @@
                     </svg>
                 </div>
             </div>
-        </a>
+        </router-link>
     </div>
 </template>
 
@@ -25,42 +25,42 @@ export default {
         return {
             blockInfo: [
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news1.png"),
                     imgDescr: "Kitchan Design",
                     title: "Let’s Get Solution For Building Construction Work",
                     date: "26 December,2022"
                 },
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news2.png"),
                     imgDescr: "Living Design",
                     title: "Low Cost Latest Invented Interior Designing Ideas.",
                     date: "26 December,2022"
                 },
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news3.png"),
                     imgDescr: "Interior Design",
                     title: "Best For Any Office & Business Interior Solution",
                     date: "26 December,2022"
                 },
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news4.png"),
                     imgDescr: "Kitchan Design",
                     title: "Let’s Get Solution For Building Construction Work",
                     date: "26 December,2022"
                 },
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news5.png"),
                     imgDescr: "Living Design",
                     title: "Low Cost Latest Invented Interior Designing Ideas.",
                     date: "26 December,2022"
                 },
                 {
-                    reference: "#",
+                    url: "/details",
                     img: require("@/assets/img/news6.png"),
                     imgDescr: "Interior Design",
                     title: "Best For Any Office & Business Interior Solution",

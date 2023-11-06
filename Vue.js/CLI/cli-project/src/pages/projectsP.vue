@@ -1,6 +1,4 @@
 <template>
-    <headerCom />
-
     <section class="linear-image linear-image--project flex">
         <div class="blog-title">
             <h2 class="title title--blog-bg">Our Project</h2>
@@ -12,7 +10,6 @@
 
         <categories @new-category = "onActiveCatChange"/>
         <projectItems :activeCategory="activeCategory"/>
-
         <div class="pagination">
             <ul>
                 <li><a href="#" class="circle-arrow circle-arrow--block active-arrow">01</a></li>
@@ -26,14 +23,13 @@
             </ul>
         </div>
     </section>
-    <footerCom />
 </template>
 
 <script>
-import categories from './categories.vue';
-import footerCom from './footerCom.vue';
-import headerCom from './headerCom.vue';
-import projectItems from './projectItems.vue';
+
+import categories from '@/components/categories.vue';
+import projectItems from '@/components/projectItems.vue';
+
 
 export default {
     data() {
@@ -42,8 +38,6 @@ export default {
         }
     },
     components: {
-        footerCom,
-        headerCom,
         categories,
         projectItems
     },

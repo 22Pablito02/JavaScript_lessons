@@ -36,17 +36,7 @@
 
         <div class="footer-pages">
             <h3 class="block-title block-title--footer">Pages</h3>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Project</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
-                </li>
-            </ul>
+            <router-link v-for="link in link" :key="link.id" :to="link.url">{{ link.name }} </router-link>
         </div>
         <div calss="footer-services"></div>
         <div calss="footer-contacts grid">
@@ -61,9 +51,29 @@
 </template>
 
 <script>
-    export default {
-        
+export default {
+    data() {
+        return {
+            link: [
+                {
+                    id: 0,
+                    name: "Home",
+                    url: "/",
+                },
+                {
+                    id: 1,
+                    name: "Projects",
+                    url: "/projects",
+                },
+                {
+                    id: 2,
+                    name: "Blog",
+                    url: "/blog",
+                },
+            ],
+        }
     }
+}
 </script>
 
 <style lang="css" scoped>
@@ -128,16 +138,14 @@
     margin: 0;
 }
 
-.footer-pages>ul {
-    list-style: none;
+.footer-pages>a {
     display: grid;
-    gap: 21px;
+    margin-bottom: 21px;
     color: #4D5053;
     font-family: "Jost";
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5;
 }
 
 .contact-info {
@@ -147,5 +155,4 @@
 .logo-block--footer {
     margin-bottom: 18px;
 }
-
 </style>

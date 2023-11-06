@@ -8,9 +8,7 @@
         </div>
         <div class="header-right">
             <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Blog</a></li>
+                <router-link v-for="link in link" :key="link.id" :to="link.url">{{ link.name }}</router-link>
             </ul>
         </div>
     </section>
@@ -18,6 +16,28 @@
 
 <script>
 export default {
+    data() {
+        return {
+            link: [
+                {
+                    id: 0,
+                    name: "Home",
+                    url: "/",
+                },
+                {
+                    id: 1,
+                    name: "Projects",
+                    url: "/projects",
+                },
+                {
+                    id: 2,
+                    name: "Blog",
+                    url: "/blog",
+                },
+            ],
+
+        }
+    }
 
 }
 </script>
@@ -66,7 +86,7 @@ export default {
     list-style: none;
 }
 
-.nav>li {
+.nav>a {
     color: #292F36;
     text-align: center;
     font-family: "Jost";
@@ -76,7 +96,7 @@ export default {
     transition: .5s;
 }
 
-.nav>li:hover {
+.nav>a:hover {
     transform: scale(1.18);
     transition: .5s;
 }

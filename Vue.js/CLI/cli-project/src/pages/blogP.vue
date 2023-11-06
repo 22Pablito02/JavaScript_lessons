@@ -1,6 +1,4 @@
 <template>
-    <headerCom />
-
     <section class="linear-image linear-image--blog flex">
         <div class="blog-title">
             <h2 class="title title--blog-bg">Articles & News</h2>
@@ -48,19 +46,13 @@
             </ul>
         </div>
     </section>
-
-    <FooterCom />
 </template>
 
 <script>
-import headerCom from "./headerCom.vue";
 import news from "@/components/news.vue";
-import FooterCom from "./footerCom.vue";
 export default {
     components: {
-        headerCom,
         news,
-        FooterCom
     },
 };
 </script>
