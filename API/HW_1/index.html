@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <label>Input your name<input type="text"></label>
+        <button>Sent</button>
+    </form>
+
+    <script>
+        'use strict';
+
+        window.addEventListener("orientationchange", () => {
+            if (window.orientation === 0) {
+                alert("Экран в вертикальном положении");
+            } else if (window.orientation === 90) {
+                alert("Экран в горизонтальном положении")
+            }
+        }, false);
+
+        window.addEventListener('beforeunload', e => {
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
