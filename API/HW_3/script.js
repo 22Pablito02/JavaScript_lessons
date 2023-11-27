@@ -1,5 +1,5 @@
 "use strict";
-const KEY = "GSE1qbUp1rIYKcoftIv9IyOJmHdom9e36RF-cwVI44Q";
+const KEY = "";
 
 const divEl = document.querySelector(".photoBox");
 const divImg = document.querySelector(".img");
